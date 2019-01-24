@@ -9,6 +9,6 @@ diagToNorm([U;ones(size(U));zeros(size(U))])*diagToNorm([zeros(size(U));L])
 for i=1:10
     A=rand(3,20);
     [U,L]=decomposition(A);
-    multiplication([U;ones(size(U));zeros(size(U))],[zeros(size(U));L]);
+    result=multiplication([U;ones(size(U));zeros(size(U))],[zeros(size(U));L]);
     norm(diagToNorm(A)-diagToNorm([U;ones(size(U));zeros(size(U))])*diagToNorm([zeros(size(U));L]))
 end
